@@ -1,0 +1,57 @@
+module.exports = {
+  env: {
+    node: true,
+    browser: true,
+    es2021: true,
+    'jest/globals': true,
+  },
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-app/recommended',
+    'plugin:jest/recommended',
+    'plugin:jest/style',
+    'airbnb-typescript',
+  ],
+  settings: {
+    jest: {
+      version: 27,
+    },
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+  },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+      tsx: true,
+    },
+    ecmaVersion: 12,
+    sourceType: 'module',
+    project: 'tsconfig.json',
+    tsconfigRootDir: __dirname,
+  },
+  ignorePatterns: ['*.css'],
+  plugins: ['import', '@typescript-eslint', 'jest'],
+  rules: {
+    indent: 'off',
+    'max-len': ['error', 120],
+    'no-console': 'off',
+    'no-irregular-whitespace': 'error',
+    quotes: ['error', 'single'],
+    semi: ['error', 'always'],
+    'prefer-promise-reject-errors': 'off',  
+    '@typescript-eslint/no-throw-literal': 'off',
+    '@typescript-eslint/indent': ['error', 2],
+    '@typescript-eslint/no-empty-interface': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'import/prefer-default-export': 'off',
+    'import/no-unused-modules': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
+    'react-app/react/react-in-jsx-scope': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/no-array-index-key': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-filename-extension': 'off',
+  },
+};
