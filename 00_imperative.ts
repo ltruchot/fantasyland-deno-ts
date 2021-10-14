@@ -1,4 +1,4 @@
-const randomTime = () => Math.random() * 100;
+import { randomTime } from "./helpers.ts";
 
 // imperative version, leads to uncertain results
 let val = "";
